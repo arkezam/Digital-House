@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class DigitalBank {
     public static void main(String[] args) {
 
@@ -10,7 +12,10 @@ public class DigitalBank {
         System.out.println(otraCuenta.getSaldo());
 
 
-
-
+        Cheque cheque1 = new Cheque("Paulina","Común", LocalDate.now(),LocalDate.now().plusDays(60),100.00);
+        System.out.println(cheque1.getNombreTitular());
+        System.out.println(cheque1.plazoMaximo());
+        cheque1.endoso("Juanita");
+        System.out.println(cheque1.getNombreTitular());
     }
 }

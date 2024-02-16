@@ -8,20 +8,22 @@ class CajaDeAhorros{
     +CajaDeAhorros(nombreTitular:String,saldo:Double,numeroCuenta:String)
     +retirar(cantidadRetirada:Double):String
     +depositar(cantidadDeposito:Double):String
-    +transferir(cantidadTransferida:Double):String
+    +transferir(otraCuenta:CajaDeAhoros, cantidadTransferida:Double):String
     +getNombreTitular():String
     +getSaldo():Double
     -verificarNombre():String
 }
-class Chaque {
+class Cheque {
     -String:tipoCheque
     -fechaEmision:LocalDate
     -fechaVencimiento:LocalDate
     -nombreTitular:String
+    -montoCheque:Double
 
     +Cheque(AllArgs)
     +endoso(nombreNuevoTitular:String):String
     +plazoMaximo():LocalDate
+    +pagarConCheque():String
 }
 
 @enduml
