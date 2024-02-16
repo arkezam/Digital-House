@@ -1,0 +1,27 @@
+@startuml
+class CajaDeAhorros{
+    -nombreTitular:String
+    -saldo:Double
+    -numeroCuenta:String
+    -tipoCuenta:String
+
+    +CajaDeAhorros(nombreTitular:String,saldo:Double,numeroCuenta:String)
+    +retirar(cantidadRetirada:Double):String
+    +depositar(cantidadDeposito:Double):String
+    +transferir(cantidadTransferida:Double):String
+    +getNombreTitular():String
+    +getSaldo():Double
+    -verificarNombre():String
+}
+class Chaque {
+    -String:tipoCheque
+    -fechaEmision:LocalDate
+    -fechaVencimiento:LocalDate
+    -nombreTitular:String
+
+    +Cheque(AllArgs)
+    +endoso(nombreNuevoTitular:String):String
+    +plazoMaximo():LocalDate
+}
+
+@enduml
