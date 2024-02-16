@@ -1,3 +1,4 @@
+package DigitalBank;
 import java.time.LocalDate;
 
 public class Cheque {
@@ -16,7 +17,7 @@ public class Cheque {
     }
 
     public String endoso(String nombreNuevoTitular){
-    //transferencia de cheque
+        //transferencia de cheque
         //TODO: Implementar funcion
         nombreTitular = nombreNuevoTitular;
 

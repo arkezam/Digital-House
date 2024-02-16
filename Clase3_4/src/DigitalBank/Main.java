@@ -1,6 +1,8 @@
+package DigitalBank;
+
 import java.time.LocalDate;
 
-public class DigitalBank {
+public class Main {
     public static void main(String[] args) {
 
         CajaDeAhorros tioRico = new CajaDeAhorros( "el Tio Rico",1000.0,"654-987-321");

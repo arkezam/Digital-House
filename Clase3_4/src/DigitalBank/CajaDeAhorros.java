@@ -1,3 +1,5 @@
+package DigitalBank;
+
 import java.util.Scanner;
 
 public class CajaDeAhorros {
@@ -13,7 +15,7 @@ public class CajaDeAhorros {
     public String retirar(Double catidadRetirada){
         System.out.println("---------Verificar Datos--------");
         System.out.println(verificarNombre());
-        System.out.println("Escriba \"SI\" para confirmar \"NO\" para corregir");
+        System.out.println("Escriba \"SI\" para confirmar datos:");
         Scanner sc = new Scanner(System.in);
         String valida = sc.next();
         valida = valida.toUpperCase();

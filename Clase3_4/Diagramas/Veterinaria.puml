@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Cliente
+class Consultorio
+class Doctor
+class Mascota
+class Pago
+class Registro
+
+class Cliente{
+    -nombre:String
+    +Cliente(nombre:String)
+    +getNombre():String
+    +setNombre(nombre:String)
+}
+class Consultorio{
+    -numero:Integer
+    +Consultorio(numero:Integer)
+    +setNumero(numero:Integer)
+    +getNumero():Integer;
+}
+class Doctor{
+    -nombre:String
+    -consultorio:Consultorio
+    +Doctor(nombre:String,consultorio:Consultorio)
+    +getNombre():String
+    +setNombre(nombre:String)
+}
+class Mascota{
+    -nombre:String
+    -tipo:String
+    -dueño:Cliente
+    -peso:Double
+    -talla:Double
+    -edad:Integer
+    -estado[]
+
+    +Mascota(tipo:String, cliente:Cliente , edad:Integer )
+    +setNombre(nombre:String)
+    +setTipo(tipo:String)
+    +setDueño(cliente:Cliente)
+    +getNombre():String
+    +getTipo():String
+    +getDueño():String
+
+}
+
+class Pago{
+    -cliente:Cliente
+    -monto:Double
+    -deuda:Double
+    +Pago(cliente:Cliente,monto:Double,deuda:Double)
+    +realizarPago()
+}
+class Registro{
+    -cliente:Cliente
+    -mascota:Mascota
+    +Registro(cliente:Cliente,mascota:Mascota)
+}
+class CajaProvisiones{
+    -peso:Double
+    -origen:String
+    -proveedor:String
+    -consultorioDestino:Consultorio
+    -descripcion:String
+    -transporteConCuidado:Boolean
+}
+
+@enduml
